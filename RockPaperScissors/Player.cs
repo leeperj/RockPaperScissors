@@ -19,7 +19,7 @@ namespace RockPaperScissors
         protected Roshambo roshambo;
         private int winCount;
         private int lossCount;
-
+        private int tieCount;
         public Player()
         {
 
@@ -31,6 +31,7 @@ namespace RockPaperScissors
         {
             if(this.roshambo == player.roshambo)
             {
+                tieCount++;
                 return false;
             }
             else if(this.roshambo == Roshambo.Rock && player.roshambo == Roshambo.Scissors)
@@ -64,6 +65,10 @@ namespace RockPaperScissors
         public int Losses()
         {
             return lossCount;
+        }
+        public int Ties()
+        {
+            return tieCount;
         }
         
     }

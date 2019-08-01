@@ -20,7 +20,7 @@ namespace RockPaperScissors
                 Player opponent = ChooseOpponent();
                 user.GenerateRoshambo();
                 opponent.GenerateRoshambo();
-
+                Console.WriteLine($"{opponent.ReturnName()} has thrown {opponent.GenerateRoshambo()}");
                 if (user.Winner(opponent))
                 {
                     Console.WriteLine($"{user.ReturnName()} is the winner!");
@@ -35,7 +35,7 @@ namespace RockPaperScissors
                 }
 
                 string quitChoice;
-                Console.WriteLine($"You have a total of {user.Wins()} wins and {user.Losses()} losses.");
+                Console.WriteLine($"You have a total of {user.Wins()} wins, {user.Losses()} losses, and {user.Ties()} ties.");
                 Console.WriteLine("Enter (Q)uit to exit, or any other key to run again");
 
                 quitChoice = Console.ReadLine().Trim();
