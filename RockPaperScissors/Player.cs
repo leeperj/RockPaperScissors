@@ -20,6 +20,10 @@ namespace RockPaperScissors
         private int winCount;
         private int lossCount;
         private int tieCount;
+
+        public string Name { get; set; }
+        public Roshambo Roshambo { get; set; }
+
         public Player()
         {
 

@@ -11,16 +11,18 @@ namespace RockPaperScissors
         public void BeginRoshambo()
         {
             UserPlayer user = new UserPlayer();
-
+            user.Name = Program.GetUserInput("Please enter your name.");
             bool goAgain = true;
 
             while (goAgain)
             {
                 Console.Clear();
                 Player opponent = ChooseOpponent();
-                user.GenerateRoshambo();
+                user.Roshambo = user.GenerateRoshambo();
+
                 opponent.GenerateRoshambo();
                 Console.WriteLine($"{opponent.ReturnName()} has thrown {opponent.GenerateRoshambo()}");
+                Console.WriteLine($"{user.Name} has thrown {user.Roshambo}");
                 if (user.Winner(opponent))
                 {
                     Console.WriteLine($"{user.ReturnName()} is the winner!");

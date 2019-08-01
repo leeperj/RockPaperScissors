@@ -11,7 +11,7 @@ namespace RockPaperScissors
         {
             public UserPlayer()
             {
-            name = Program.GetUserInput("Please enter your name.");
+            
             }
 
             public override Roshambo GenerateRoshambo()
