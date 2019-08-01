@@ -63,10 +63,13 @@ namespace RockPaperScissors
             {
                 return new Player2();
             }
-            return ChooseOpponent();
+            else
+            {
+                Console.WriteLine("That was not a valid input, please press 1 or 2.");
+                return ChooseOpponent();
+            }
+
         }
-
-
 
     }
 }
